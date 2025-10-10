@@ -1,0 +1,118 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Accent colors for gradients and icons (from Tailwind config) */
+    --color-primary: #ffffff;
+    /* White */
+    --color-secondary: #818cf8;
+    /* Indigo-400 (Light Indigo) */
+}
+
+/* --- Aurora Border/Glow Effect for Cards --- */
+/* This is a complex effect that is best kept as a custom class. */
+/* We target the new component classes now */
+.skill-card,
+.project-card,
+.cert-card>div {
+    position: relative;
+}
+
+.skill-card::before,
+.project-card::before,
+.cert-card>div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    /* Matches Tailwind's rounded-lg */
+    padding: 2px;
+    /* The "border" width */
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.3;
+    /* Start with a subtle glow */
+    transition: opacity 0.3s ease, background 0.3s ease;
+    animation: pulse-aurora 5s infinite ease-in-out;
+}
+
+.skill-card:hover::before,
+.project-card:hover::before,
+.cert-card:hover>div::before {
+    animation: none;
+    /* Pause the pulse on hover for a solid glow */
+    opacity: 1;
+    /* Fully opaque on hover */
+}
+
+/* --- Typed.js Cursor Color --- */
+.typed-cursor {
+    color: #a0aec0;
+    /* Matches Tailwind's gray-400 */
+}
+
+/* --- Active Nav Link Style --- */
+.active-link {
+    background-color: var(--color-secondary);
+    color: #ffffff !important;
+    /* White text on light indigo background */
+    /* Use !important to override default text-gray-300 */
+    font-weight: 600;
+    /* semi-bold */
+}
+
+/* --- Keyframes for Aurora Pulse --- */
+@keyframes pulse-aurora {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* --- Hide Scrollbar for Swipe Containers --- */
+.swipe-container::-webkit-scrollbar {
+    display: none;
+}
+
+.swipe-container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* --- Swipe Buttons --- */
+.swipe-button {
+    background-color: rgba(74, 85, 104, 0.5);
+    /* bg-gray-700/50 */
+    padding: 0.5rem;
+    border-radius: 9999px;
+    color: white;
+    transition: background-color 0.3s ease;
+    display: none;
+    /* Hidden by default */
+}
+
+.swipe-button:hover {
+    background-color: #4a5568;
+    /* gray-700 */
+}
+
+@media (min-width: 768px) {
+
+    /* md breakpoint */
+    #projects-prev,
+    #projects-next {
+        display: block;
+    }
+}

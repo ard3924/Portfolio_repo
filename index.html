@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aravind R</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%22 y=%2268%22 font-family=%22sans-serif%22 font-size=%2260%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%234f46e5%22>AR</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#ffffff',   // White
+                        secondary: '#818cf8'  // Indigo-400 (Light Indigo)
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- tsParticles for subtle background animation -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <!-- Typed.js for dynamic text animation -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button"
+        class="md:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-gray-800/50 text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+
+    <!-- Sidebar Navigation (Desktop) -->
+    <aside class="hidden md:flex flex-col w-64 h-screen px-4 py-8 bg-gray-800 border-r border-gray-700 fixed z-30">
+        <h1 class="text-3xl font-bold text-white mb-8 text-center">Aravind R</h1>
+        <nav id="desktop-menu" class="flex flex-col flex-1 space-y-2">
+            <a href="#hero"
+                class="px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white transition">Home</a>
+            <a href="#about"
+                class="px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white transition">About</a>
+            <a href="#skills"
+                class="px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white transition">Skills</a>
+            <a href="#projects"
+                class="px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white transition">Projects</a>
+            <a href="#certifications"
+                class="px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white transition">Certifications</a>
+            <a href="#contact"
+                class="px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white transition">Contact</a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Slide-in Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-y-0 left-0 w-64 z-40 transform -translate-x-full
+        bg-gray-800 transition-transform duration-300 ease-in-out">
+        <div class="p-4">
+            <h1 class="text-2xl font-bold text-white mb-8">Aravind R</h1>
+            <nav class="flex flex-col space-y-2">
+                <a href="#hero" class="block py-2 px-4 text-sm rounded hover:bg-gray-700">Home</a>
+                <a href="#about" class="block py-2 px-4 text-sm rounded hover:bg-gray-700">About</a>
+                <a href="#skills" class="block py-2 px-4 text-sm rounded hover:bg-gray-700">Skills</a>
+                <a href="#projects" class="block py-2 px-4 text-sm rounded hover:bg-gray-700">Projects</a>
+                <a href="#certifications" class="block py-2 px-4 text-sm rounded hover:bg-gray-700">Certifications</a>
+                <a href="#contact" class="block py-2 px-4 text-sm rounded hover:bg-gray-700">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="md:ml-64">
+        <section id="hero"
+            class="min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-center reveal relative overflow-hidden">
+            <div class="container mx-auto px-4 relative z-10">
+                <div id="tsparticles" class="absolute inset-0 z-0"></div>
+                <h2 class="text-5xl font-bold mb-4 text-gray-900">Aravind R</h2>
+                <p class="text-xl mb-8 text-gray-900">I am a <span id="typed-text" class="font-semibold"></span></p>
+                <a href="mailto:aravindr3924@gmail.com" class="relative inline-block px-8 py-3 font-semibold text-indigo-600
+                bg-gradient-to-r from-primary to-secondary rounded-lg shadow-lg border border-indigo-100
+                transform hover:scale-105 transition-transform duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+
+        <section id="about"
+            class="py-20 bg-gray-800 reveal opacity-0 translate-y-5 transition-all duration-700 ease-out">
+            <div class="container mx-auto px-4 text-center">
+                <h2
+                    class="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                    About Me</h2>
+                <p class="text-lg max-w-3xl mx-auto">A dedicated Computer Science student with a strong foundation in
+                    Full
+                    Stack Development and practical
+                    experience in Generative AI. Eager to apply technical and collaborative skills to solve complex
+                    problems in a
+                    dynamic environment.</p>
+                <a href="resume/autoCV__1_.pdf" download
+                    class="inline-flex items-center mt-8 bg-primary text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-secondary hover:text-white border border-indigo-200 transition-colors duration-300">
+                    <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Download Resume
+                </a>
+                <div class="flex justify-center space-x-6 mt-8">
+                    <a href="https://github.com/ard3924" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-400 hover:text-secondary transition-colors" title="GitHub">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aravind-r/" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-400 hover:text-secondary transition-colors" title="LinkedIn">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills"
+            class="py-20 bg-gray-800 reveal opacity-0 translate-y-5 transition-all duration-700 ease-out">
+            <div class="container mx-auto px-4 text-center">
+                <h2
+                    class="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                    Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
+                    <!-- Skill Card: React -->
+                    <div
+                        class="skill-card bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-2xl flex flex-col items-center justify-center p-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React"
+                            class="w-12 h-12 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                        <span class="font-semibold">React</span>
+                    </div>
+                    <!-- Skill Card: Node.js -->
+                    <div
+                        class="skill-card bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-2xl flex flex-col items-center justify-center p-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"
+                            class="w-12 h-12 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                        <span class="font-semibold">Node.js</span>
+                    </div>
+                    <!-- Skill Card: Express -->
+                    <div
+                        class="skill-card bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-2xl flex flex-col items-center justify-center p-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                            alt="Express"
+                            class="w-12 h-12 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                        <span class="font-semibold">Express.js</span>
+                    </div>
+                    <!-- Skill Card: MongoDB -->
+                    <div
+                        class="skill-card bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-2xl flex flex-col items-center justify-center p-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                            alt="MongoDB"
+                            class="w-12 h-12 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                        <span class="font-semibold">MongoDB</span>
+                    </div>
+                    <!-- Skill Card: TailwindCSS -->
+                    <div
+                        class="skill-card bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-2xl flex flex-col items-center justify-center p-4">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                            alt="Tailwind CSS"
+                            class="w-12 h-12 mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+                        <span class="font-semibold">Tailwind CSS</span>
+                    </div>
+                    <!-- Skill Card: Generative AI -->
+                    <div
+                        class="skill-card bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1.5 hover:shadow-2xl flex flex-col items-center justify-center p-4">
+                        <svg class="w-12 h-12 mb-2 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.5 21.75l-.398-1.188a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.188-.398a2.25 2.25 0 001.423-1.423L16.5 15.75l.398 1.188a2.25 2.25 0 001.423 1.423L19.5 18.75l-1.188.398a2.25 2.25 0 00-1.423 1.423z" />
+                        </svg>
+                        <span class="font-semibold">Generative AI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects"
+            class="py-20 bg-gray-800 reveal opacity-0 translate-y-5 transition-all duration-700 ease-out">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                    Projects</h2>
+                <div>
+                    <div id="projects-swipe-container"
+                        class="swipe-container flex overflow-x-auto snap-x snap-proximity gap-8 pb-4 pointer-events-auto">
+                        <a href="https://github.com/ard3924/Major_Project.git" target="_blank" rel="noopener noreferrer"
+                            data-project-link
+                            class="project-card block w-4/5 md:w-1/2 lg:w-1/3 flex-shrink-0 snap-center bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-2xl overflow-hidden pointer-events-auto">
+                            <div class="overflow-hidden">
+                                <img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZGV8ZW58MHx8fHwxNjI4Mzk0NzY0&ixlib=rb-1.2.1&q=80&w=600"
+                                    srcset="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZGV8ZW58MHx8fHwxNjI4Mzk0NzY0&ixlib=rb-1.2.1&q=80&w=400 400w,
+                                        https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZGV8ZW58MHx8fHwxNjI4Mzk0NzY0&ixlib=rb-1.2.1&q=80&w=600 600w,
+                                        https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fGNvZGV8ZW58MHx8fHwxNjI4Mzk0NzY0&ixlib=rb-1.2.1&q=80&w=800 800w"
+                                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 80vw"
+                                    alt="Malware Detection System"
+                                    class="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-bold mb-1 text-gray-100">Malware Detection System</h3>
+                                <p class="text-sm text-indigo-400 font-semibold mb-2">Major Project</p>
+                                <p class="mb-4 text-gray-300">A detection model in Python & Flask achieving 94% accuracy
+                                    with
+                                    Logistic Regression and Extra Tree Classifier.</p>
+                                <div class="flex items-center space-x-4 mt-auto pt-4">
+                                    <span
+                                        class="bg-primary text-indigo-600 px-4 py-2 rounded border border-indigo-200">View
+                                        on GitHub</span>
+                                    <span class="text-gray-300" title="Source Code">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/ard3924/Minor_Project.git" target="_blank" rel="noopener noreferrer"
+                            data-project-link
+                            class="project-card block w-4/5 md:w-1/2 lg:w-1/3 flex-shrink-0 snap-center bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-2xl overflow-hidden pointer-events-auto">
+                            <div class="overflow-hidden">
+                                <img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGZvb2R8ZW58MHx8fHwxNjI4Mzk0ODg1&ixlib=rb-1.2.1&q=80&w=600"
+                                    srcset="https://images.unsplash.com/photo-1504674900247-0877df9cc836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGZvb2R8ZW58MHx8fHwxNjI4Mzk0ODg1&ixlib=rb-1.2.1&q=80&w=400 400w,
+                                        https://images.unsplash.com/photo-1504674900247-0877df9cc836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGZvb2R8ZW58MHx8fHwxNjI4Mzk0ODg1&ixlib-rb-1.2.1&q=80&w=600 600w,
+                                        https://images.unsplash.com/photo-1504674900247-0877df9cc836?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGZvb2R8ZW58MHx8fHwxNjI4Mzk0ODg1&ixlib-rb-1.2.1&q=80&w=800 800w"
+                                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 80vw"
+                                    alt="Food Delivery Platform"
+                                    class="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-bold mb-1 text-gray-100">Food Delivery Platform</h3>
+                                <p class="text-sm text-indigo-400 font-semibold mb-2">Minor Project</p>
+                                <p class="mb-4 text-gray-300">A full-stack MERN platform with real-time order tracking,
+                                    authentication, and payment workflows.</p>
+                                <div class="flex items-center space-x-4 mt-auto pt-4">
+                                    <span
+                                        class="bg-primary text-indigo-600 px-4 py-2 rounded border border-indigo-200">View
+                                        on GitHub</span>
+                                    <span class="text-gray-300" title="Source Code">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/ard3924/Ignite.git" target="_blank" rel="noopener noreferrer"
+                            data-project-link
+                            class="project-card block w-4/5 md:w-1/2 lg:w-1/3 flex-shrink-0 snap-center bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-2xl overflow-hidden pointer-events-auto">
+                            <div class="overflow-hidden">
+                                <img loading="lazy"
+                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNjI4Mzk0OTU2&ixlib=rb-1.2.1&q=80&w=600"
+                                    srcset="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNjI4Mzk0OTU2&ixlib=rb-1.2.1&q=80&w=400 400w,
+                                        https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNjI4Mzk0OTU2&ixlib=rb-1.2.1&q=80&w=600 600w,
+                                        https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNjI4Mzk0OTU2&ixlib=rb-1.2.1&q=80&w=800 800w"
+                                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 80vw"
+                                    alt="Freelance Platform"
+                                    class="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-2xl font-bold mb-1 text-gray-100">Freelance Platform "Ignite"</h3>
+                                <p class="text-sm text-indigo-400 font-semibold mb-2">Personal Project</p>
+                                <p class="mb-4 text-gray-300">A MERN-stack freelance marketplace with project
+                                    management,
+                                    user
+                                    profiles, and an admin dashboard.</p>
+                                <div class="flex items-center space-x-4 mt-auto pt-4">
+                                    <span
+                                        class="bg-primary text-indigo-600 px-4 py-2 rounded border border-indigo-200">View
+                                        on GitHub</span>
+                                    <span class="text-gray-300" title="Source Code">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mt-4 space-x-4">
+                    <button id="projects-prev" class="swipe-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <button id="projects-next" class="swipe-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications"
+            class="py-20 bg-gray-800 reveal opacity-0 translate-y-5 transition-all duration-700 ease-out">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                    Certifications</h2>
+                <div>
+                    <div id="certifications-swipe-container"
+                        class="swipe-container flex overflow-x-auto snap-x snap-proximity gap-6 max-w-6xl mx-auto sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        <!-- Certification Card -->
+                        <a href="https://www.linkedin.com/learning/certificates/abeef268d93d43214b2e097f8446ff6ebdd553006fd9b3c24a9b796d22f3f97d"
+                            target="_blank" rel="noopener noreferrer"
+                            class="cert-card block w-3/4 flex-shrink-0 snap-center sm:w-auto">
+                            <div
+                                class="bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-2xl p-6 flex flex-col justify-center text-center h-full">
+                                <h3 class="text-lg font-semibold mb-1 text-gray-100">Career Essentials in Generative AI
+                                </h3>
+                                <p class="text-sm text-gray-300">Microsoft & LinkedIn</p>
+                            </div>
+                        </a>
+                        <!-- Certification Card -->
+                        <a href="https://www.linkedin.com/learning/certificates/b42c273722cd6facf79b895bab4aefd085e82f0c0e1874a6dcb36388a866b8ef"
+                            target="_blank" rel="noopener noreferrer"
+                            class="cert-card block w-3/4 flex-shrink-0 snap-center sm:w-auto">
+                            <div
+                                class="bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-2xl p-6 flex flex-col justify-center text-center h-full">
+                                <h3 class="text-lg font-semibold mb-1 text-gray-100">React Essential Training</h3>
+                                <p class="text-sm text-gray-300">LinkedIn Learning</p>
+                            </div>
+                        </a>
+                        <!-- Certification Card -->
+                        <a href="https://www.linkedin.com/learning/certificates/29dcba1bdef7099839e41c5386ecb952884dd84526e060deef09b5b8fd468985"
+                            target="_blank" rel="noopener noreferrer"
+                            class="cert-card block w-3/4 flex-shrink-0 snap-center sm:w-auto">
+                            <div
+                                class="bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-2xl p-6 flex flex-col justify-center text-center h-full">
+                                <h3 class="text-lg font-semibold mb-1 text-gray-100">Figma Essential Training</h3>
+                                <p class="text-sm text-gray-300">LinkedIn Learning</p>
+                            </div>
+                        </a>
+                        <!-- Certification Card -->
+                        <a href="https://www.linkedin.com/learning/certificates/8d5b822c3e7cf861eefe7ffab6e0f5e6abda6cbb3c8fcaeb14a4859e888e2a70"
+                            target="_blank" rel="noopener noreferrer"
+                            class="cert-card block w-3/4 flex-shrink-0 snap-center sm:w-auto">
+                            <div
+                                class="bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-2xl p-6 flex flex-col justify-center text-center h-full">
+                                <h3 class="text-lg font-semibold mb-1 text-gray-100">Learning Microsoft 365 Copilot</h3>
+                                <p class="text-sm text-gray-300">LinkedIn Learning</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mt-4 space-x-4 sm:hidden">
+                    <button id="certs-prev" class="swipe-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <button id="certs-next" class="swipe-button">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact"
+            class="py-20 bg-gray-800 reveal opacity-0 translate-y-5 transition-all duration-700 ease-out">
+            <div class="container mx-auto px-4 text-center">
+                <h2
+                    class="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                    Contact Me</h2>
+                <div class="flex flex-wrap justify-center gap-6 max-w-3xl mx-auto">
+                    <div
+                        class="flex items-center space-x-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-4 rounded-lg shadow-md">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                        <a href="mailto:aravindr3924@gmail.com"
+                            class="text-gray-200 hover:text-primary transition">aravindr3924@gmail.com</a>
+                    </div>
+                    <div
+                        class="flex items-center space-x-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-4 rounded-lg shadow-md">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                        </svg>
+                        <a href="tel:+919745251033" class="text-gray-200 hover:text-primary transition">+91
+                            9745251033</a>
+                    </div>
+                    <div
+                        class="flex items-center space-x-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-4 rounded-lg shadow-md">
+                        <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                        <a href="https://www.linkedin.com/in/aravind-r/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-200 hover:text-primary transition">aravind-r</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-800 text-white py-6 text-center">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="https://github.com/ard3924" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-primary transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aravind-r/" target="_blank" rel="noopener noreferrer"
+                        class="hover:text-primary transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                </div>
+                <p>&copy; <span id="copyright-year"></span> Aravind R. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="hidden fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hover:bg-indigo-500 transition-all duration-300 z-50">
+        <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
